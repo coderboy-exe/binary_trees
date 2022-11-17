@@ -30,7 +30,8 @@ int count_nodes(const binary_tree_t *tree)
  *
  * Return: 1 if complete, 0 otherwise
  */
-bool is_complete(const binary_tree_t *tree, int index, int num_nodes)
+
+int is_complete(const binary_tree_t *tree, int index, int num_nodes)
 {
 	if (tree == NULL)
 		return (1);
