@@ -17,7 +17,7 @@ int count_nodes(const binary_tree_t *tree)
 
 	l_nodes = count_nodes(tree->left);
 	r_nodes = count_nodes(tree->right);
-	
+
 	return (l_nodes + r_nodes + 1);
 }
 
@@ -36,15 +36,15 @@ int is_complete(const binary_tree_t *tree, int index, int num_nodes)
 	if (tree == NULL)
 		return (1);
 
-        int l_check, r_check;
+	int l_check, r_check;
 
-        if (index >= num_nodes)
-                return (0);
+	if (index >= num_nodes)
+		return (0);
 
-        l_check = is_complete(tree->left, 2*index + 1, num_nodes);
-        r_check = is_complete(tree->right, 2*index + 2, num_nodes);
+	l_check = is_complete(tree->left, 2 * index + 1, num_nodes);
+	r_check = is_complete(tree->right, 2 * index + 2, num_nodes);
 
-        return (l_check && r_check);
+	return (l_check && r_check);
 }
 
 /**
